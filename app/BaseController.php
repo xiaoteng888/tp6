@@ -91,4 +91,9 @@ abstract class BaseController
         return $v->failException(true)->check($data);
     }
 
+    public function __call($name,$argument)
+    {
+        return msg(config('statusCode.action_is_not_found'),"方法{$name}不存在",null,404);
+    }
+
 }
