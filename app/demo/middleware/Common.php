@@ -7,6 +7,8 @@ class Common {
     {
         $request->name = "kobe";
 
-        return $next($request);
+        $response =  $next($request);
+        $request->name = 'heman';
+        return $response;
     }
 }

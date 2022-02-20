@@ -14,11 +14,18 @@ class E extends BaseController
     {
         //throw new HttpException(404,'找不到数据');
 
+
+
     }
 
+    public function demo(Request $request)
+    {
+        echo $request->name;
+        return $request->name;
+    }
     public function middle(Request $request)
     {
-
         echo $request->name;
+        return $request->name;
     }
 }

@@ -6,7 +6,7 @@ namespace app\common\model\mysql;
 
 use think\Model;
 
-class Admin extends Model
+class Admin extends BaseModel
 {
     /**
      * 根据用户名获取后端Aadmin表数据
@@ -24,15 +24,5 @@ class Admin extends Model
         return $this->where($where)->find();
     }
 
-    public function updateById($id, $updateData)
-    {
-        if(!$id || !$updateData || !is_array($updateData)){
-            return false;
-        }
-        $where = [
-            'id' => $id,
-        ];
-        return $this->where($where)->save($updateData);
-    }
 
 }

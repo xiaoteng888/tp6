@@ -46,7 +46,9 @@ layui.use(['form'], function () {
                         window.location = '/admin/index/index';
                     });
                 }else{
-                    layer.msg(res.message);
+                    layer.msg(res.message,'',function(){
+                        location.reload();
+                    });
 
                     return false;
                 }

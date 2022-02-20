@@ -27,12 +27,12 @@ class Login extends AdminBase
     public function md5()
     {
 
-            throw new HttpException(400,"用户不存在");
+            //throw new HttpException(400,"用户不存在");
 
 
         //echo date("Y-m-d H:i:s");
         //halt(session(config('admin.session_admin')));
-        //return md5("admin_admin");
+        return md5("123456");
     }
     public function check(Request $request)
     {

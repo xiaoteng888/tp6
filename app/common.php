@@ -11,9 +11,9 @@
 function msg($code, $message='error', $data = [], $statusCode = 200)
 {
 	$res = [
-            'code' => $code,
+            'status' => $code,
             'message' => $message,
-            'data' => $data,
+            'result' => $data,
         ];
     return json($res,$statusCode);
 }
